@@ -1,0 +1,9 @@
+model: "hf/themanas021/falcon-camel-math-Instruct"
+type: CHAT
+conv_template: "falcon"
+
+model_loader: HF
+quant_file: null
+tokenizer_name: tiiuae/falcon-7b
+trust_remote_code: true
+use_auth_token: true

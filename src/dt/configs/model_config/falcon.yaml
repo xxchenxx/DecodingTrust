@@ -1,0 +1,9 @@
+model: "hf/tiiuae/falcon-7b"
+type: CHAT
+conv_template: "falcon"
+
+model_loader: HF
+quant_file: null
+tokenizer_name: null
+trust_remote_code: true
+use_auth_token: true

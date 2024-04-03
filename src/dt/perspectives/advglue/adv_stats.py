@@ -10,8 +10,9 @@ BASE_MODELS = ["alpaca", "vicuna", "stable-vicuna"]
 
 def main():
     benign_files = glob(os.path.join(RESULT_DIR, "**", "*benign*.json"), recursive=True)
+    # print(benign_files)
     target_models = [os.path.dirname(x) for x in benign_files]
-
+    target_models = ["results/adv-glue-plus-plus/hf/tiiuae/falcon-7b", "results/adv-glue-plus-plus/hf/themanas021/falcon-camel-math-Instruct", "results/adv-glue-plus-plus/hf/jinaai/falcon-7b-code-alpaca-lora/", "results/adv-glue-plus-plus/hf/tiiuae/falcon-7b-instruct"]
     df = {
         "BaseModel": [], "TargetModel": [], "Transferability": [], "Accuracy": [], "AccuracyNoRefusal": [],
         "Task": [], "RR+NE": [], "TaskDataCount": [], "HasDemo": []
